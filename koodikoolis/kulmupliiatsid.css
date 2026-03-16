@@ -1,0 +1,163 @@
+body {
+            background-color: black;
+            color: yellow;
+            /* center page content horizontally and provide padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* center children */
+            justify-content: flex-start;
+            padding: 36px;
+            box-sizing: border-box;
+            min-height: 100vh;
+        }
+        button {
+            background-color: blue;
+            color: yellow;
+            font-size: 27px;
+            border: 1px solid white;
+            border-radius: 0; /* square corners so buttons can touch */
+            cursor: pointer;
+            padding: 0; /* remove internal padding */
+            margin: 0;  /* remove external margin so sides touch */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        /* ensure anchor inside button doesn't add spacing */
+        button a {
+          display: block;
+          padding: 8px 12px; /* small clickable area but not added to button box itself */
+          color: inherit;
+          text-decoration: none;
+        }
+
+iframe {
+    background-color: white;
+    border-radius: 6px;
+    padding: 18px;
+    margin: 18px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    box-sizing: border-box;
+}
+
+/* make direct children of body constrained and centered */
+body > * {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.git-reminder {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #ffd;
+  margin-bottom: 18px;
+}
+.git-reminder pre {
+  background: rgba(0,0,0,0.4);
+  padding: 8px;
+  border-radius: 6px;
+  color: yellow;
+  margin: 6px 0;
+  overflow:auto;
+}
+
+.group {
+  background: rgba(255,255,255,0.02);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+.group-item { margin: 8px 0; }
+.group-item > div { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.group-percent { color: #ffd700; font-weight: 700; margin-left: 8px; }
+.tasks { padding-left: 18px; margin-top: 6px; }
+.todo { display:flex; align-items:center; gap:8px; padding:4px 0; }
+.disclaimer { margin-top: 20px; color: #ccc; text-align:center; }
+
+.todo {
+  font-family: sans-serif;
+  margin: 10px 0;
+}
+
+.todo input {
+  display: none;
+}
+
+/* make group checkboxes behave like clickable buttons (same visual style as .todo labels) */
+input.group-checkbox {
+  display: none; /* keep the native checkbox hidden */
+}
+
+/* Unified box style for all clickable task/group labels to resemble spreadsheet cells */
+.todo input,
+input.group-checkbox,
+.todo input[type="checkbox"] {
+  display: none; /* hide native checkboxes */
+}
+
+/* labels act like cells */
+.todo label,
+input.group-checkbox + label {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  background: black; /* match page background */
+  color: yellow;
+  border: 1px solid white; /* white square border */
+  border-radius: 0; /* square corners */
+  box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none; /* ensure no strike-through */
+}
+
+/* checked state: green background, white text, no strike-through */
+.todo input:checked + label,
+input.group-checkbox:checked + label {
+  background: #4CAF50;
+  color: white;
+  text-decoration: none;
+}
+
+/* make group header layout keep label and percent aligned but label stays like a cell */
+.group-item > div { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.group-item > div label { flex: 1 1 auto; }
+.group-percent { margin-left: 12px; color: yellow; font-weight: 700; }
+
+/* tasks shown in a grid (excel-like) */
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 8px;
+}
+
+/* ensure todo items occupy full cell width */
+.todo { display:block; }
+.todo label { display:block; }
+
+/* small responsive tweak so grid stacks on narrow screens */
+@media (max-width: 600px) {
+  .tasks { grid-template-columns: repeat(1, 1fr); }
+}
+
+.todo label {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.todo input:checked + label {
+  background: #4CAF50;
+  color: white;
+  text-decoration: line-through;
+}

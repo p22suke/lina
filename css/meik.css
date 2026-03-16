@@ -1,5 +1,4 @@
 html {
-    background: url(pilves.jpeg) no-repeat left rgb(195, 209, 238); 
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -12,39 +11,7 @@ html {
      font-family: 'Times New Roman', Times, serif;
  }
  
- 
- a {
-     color: blue;
-     cursor:crosshair;
- }
- 
- 
- a:visited {
-     color: blue;
- }
- 
- 
- header {
-     width: 100%;
-     max-width: 1980px;
-     position: fixed;
-     display: flex;
-     justify-content: space-between;
-     padding-bottom: 0.4em;
-     top: 0;
-     left: 0;
-     border: 3px;
-     z-index: 4;
- }
- 
- h1 {
-     font-size: 1em;
-     padding: 0;
-     margin: 0;
-     font-weight: normal;
- }
- aside {
- }
+
  
  div {
      position: absolute;
@@ -85,12 +52,6 @@ html {
  div {
      padding-top: 1em;
      padding-bottom: 1em;
- }
- 
- nav {
-     position: fixed;
-     bottom: 0;
-     right: 0;
  }
  
  ul {
