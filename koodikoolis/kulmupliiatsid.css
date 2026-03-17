@@ -1,0 +1,384 @@
+body {
+            background-color: black;
+            color: yellow;
+            /* center page content horizontally and provide padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* center children */
+            justify-content: flex-start;
+            padding: 36px;
+            box-sizing: border-box;
+            min-height: 100vh;
+        }
+
+h2 {
+  border : 2px solid white;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+span {
+  color: white;
+}
+
+/* make direct children of body constrained and centered */
+body > * {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-section {
+  margin-bottom: 0;
+}
+
+.git-reminder {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #ffd;
+  margin-bottom: 18px;
+}
+.git-reminder pre {
+  background: rgba(0,0,0,0.4);
+  padding: 8px;
+  border-radius: 6px;
+  color: yellow;
+  margin: 6px 0;
+  overflow:auto;
+}
+
+.group {
+background: rgba(0,0,0,0.4);
+  border-radius: 6px;
+  color: yellow;
+  margin: 0;
+  overflow:auto;
+
+}
+.group-item { margin: 0; }
+.group-item > div { display:block; }
+.group-percent { color:white; font-weight: 700; margin-left: 0; }
+.tasks { margin: 0; padding: 0;  }
+.todo { display:flex; align-items:center; padding:0; }
+.disclaimer { margin-top: 20px; color: #ccc; text-align:center; }
+
+.readme-note {
+  margin-top: 12px;
+  background: black;
+  color: blue;
+  padding: 10px;
+  text-align: left;
+}
+
+.readme-note h3 {
+  margin: 0 0 6px 0;
+  color: blue;
+  font-weight: 700;
+}
+
+.readme-note p {
+  margin: 0;
+}
+
+.readme-note .readme-sidefx {
+  color: yellow;
+  font-style: italic;
+}
+
+.todo {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.todo input {
+  display: none;
+}
+
+/* make group checkboxes behave like clickable buttons (same visual style as .todo labels) */
+input.group-checkbox {
+  display: none; /* keep the native checkbox hidden */
+}
+
+/* Unified box style for all clickable task/group labels to resemble spreadsheet cells */
+.todo input,
+input.group-checkbox,
+.todo input[type="checkbox"] {
+  display: none; /* hide native checkboxes */
+}
+
+/* labels act like cells */
+.todo label,
+input.group-checkbox ~ label {
+  display: block;
+  width: 100%;
+  background: black; /* match page background */
+  color: yellow;
+  border: 1px solid white; /* white square border */
+  border-radius: 0; /* square corners */
+  box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none; /* ensure no strike-through */
+}
+
+label.progress-fill {
+  --task-progress: 0%;
+  background-color: black !important;
+  background-image: linear-gradient(
+    90deg,
+    #4CAF50 0%,
+    #4CAF50 var(--task-progress),
+    black var(--task-progress),
+    black 100%
+  ) !important;
+  background-repeat: no-repeat;
+  color: yellow;
+}
+
+label.progress-fill.is-complete {
+  background-color: #4CAF50 !important;
+  background-image: none !important;
+  color: white;
+}
+
+label.progress-fill.is-complete .group-percent {
+  color: yellow;
+}
+
+/* checked state: green background, white text, no strike-through */
+.todo input:checked ~ label,
+input.group-checkbox:checked ~ label {
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+}
+
+/* make group header layout keep label and percent aligned but label stays like a cell */
+.group-item > div { display:display; align-items:center; justify-content:space-between; gap:12px; }
+.group-item > div label { flex: 1 1 auto; }
+.group-percent { margin-left: 0; color: white; font-weight: 700; }
+
+.group-item > .tree-toggle-header {
+  display: flex !important;
+  align-items: stretch;
+  gap: 6px;
+}
+
+.group-item > .tree-toggle-header > label {
+  flex: 0 0 80%;
+  max-width: 80%;
+}
+
+.group-item.tree-toggle > .tasks {
+  display: block;
+  width: 100%;
+  padding-left: 26px;
+  box-sizing: border-box;
+}
+
+.todo.tree-toggle-header {
+  display: grid !important;
+  grid-template-columns: 20% calc(80% - 6px);
+  column-gap: 6px;
+  row-gap: 0;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+}
+
+.todo.tree-toggle-header > .tree-toggle-btn,
+.todo.tree-toggle-header > label {
+  display: block;
+  width: auto;
+  max-width: none;
+}
+
+.todo.tree-toggle-header > .tree-toggle-btn {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo.tree-toggle-header > label {
+  margin: 0;
+}
+
+.todo.tree-toggle-header > .tasks {
+  display: block;
+  width: 100%;
+  grid-column: 1 / -1;
+  padding-left: 26px;
+  box-sizing: border-box;
+}
+
+.todo.task-detail-toggle {
+  display: grid !important;
+  grid-template-columns: 20% calc(80% - 6px);
+  column-gap: 6px;
+  row-gap: 8px;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+}
+
+.todo.task-detail-toggle > .task-detail-btn,
+.todo.task-detail-toggle > label {
+  display: block;
+  width: auto;
+  max-width: none;
+}
+
+.todo.task-detail-toggle > .task-detail-btn {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo.task-detail-toggle > label {
+  margin: 0;
+}
+
+.task-description {
+  display: block;
+  width: 100%;
+  grid-column: 1 / -1;
+  padding: 0 0 0 26px;
+  box-sizing: border-box;
+  border: 1px solid white;
+  background: black;
+  color: yellow;
+}
+
+.tree-toggle-btn {
+  flex: 0 0 20%;
+  max-width: 20%;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: black;
+  color: yellow;
+  border: 1px solid white;
+  cursor: pointer;
+  font-size: 44px;
+  line-height: 1;
+}
+
+.tree-toggle-btn:hover {
+  filter: brightness(1.1);
+}
+
+/* tasks shown as a vertical list */
+.tasks {
+  display: block;
+  margin-top: 0;
+}
+
+/* ensure todo items occupy full cell width */
+.todo { display:block; }
+.todo label { display:block; }
+
+.todo label {
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.todo label:not(.progress-fill) {
+  background: black;
+}
+
+.todo input:checked ~ label {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.todo input:checked ~ label .group-percent,
+input.group-checkbox:checked ~ label .group-percent {
+  color: yellow;
+}
+
+footer{
+    margin-top: 20px;
+    color: #ccc;
+    text-align: center;
+}
+
+#kalender {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: blue;
+  text-align: left;
+}
+
+#kalender .kalender-code {
+  color: blue;
+}
+
+#kalender .kal-number {
+  color: blue;
+}
+
+#kalender .kal-separator {
+  color: white;
+}
+
+#kalender .kal-week-link {
+  color: yellow;
+  text-decoration: underline;
+  cursor: crosshair;
+}
+
+#kalender .kal-week-link:visited {
+  color: yellow;
+}
+
+#kalender .kal-week-link:hover {
+  text-decoration: underline;
+}
+
+
+.where-marker-floating {
+  position: fixed;
+  z-index: 10000;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: red;
+  pointer-events: none;
+  transform: translateX(-20%);
+}
+
+.where-symbol {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: red;
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.25);
+  animation: where-pulse 1.2s infinite ease-in-out;
+}
+
+.where-tag {
+  color: red;
+  font-weight: 700;
+}
+
+@keyframes where-pulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.25); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.9; }
+}

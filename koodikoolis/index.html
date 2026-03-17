@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siina koodikoolis</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%91%81%EF%B8%8F%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="kulmupliiatsid.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <script src="/js/header.js"></script>
+<!-- Git reminder -->
+<div class="git-reminder">
+  <strong>Before you start:</strong>
+  <pre>
+git fetch <strong>to know when </strong>
+git pull <strong>is necessary</strong>
+  </pre>
+</div>
+
+<div class="top-section">
+  <h2>
+    <input type="checkbox" id="main-task" class="group-checkbox">
+    <label for="main-task"><span>koodi</span> ILUSTAJA 
+    <span class="group-percent" id="percent-main">0%</span></label>
+  </h2>
+
+  <div class="group root-group" id="main-group">
+    <!-- Two main subtasks -->
+    <div class="group-item">
+
+      <div class="group">
+      <!-- 3 weeks under Module 1 -->
+      <div class="group-item">
+        <div>
+          <input type="checkbox" id="m1-week1" class="group-checkbox">
+          <label for="m1-week1">1 Week <span class="group-percent" id="percent-m1-w1">0%</span></label>
+          
+        </div>
+
+        <div class="tasks">
+          <div class="todo">
+            <input type="checkbox" id="m1-w1-t1" class="group-checkbox">
+            <label for="m1-w1-t1">P2EV 1 <span class="group-percent" id="percent-m1-w1-t1">0%</span></label>
+            <div class="tasks">
+              <div class="todo"><input type="checkbox" id="m1-w1-t1-s1" class="task-checkbox" data-description="Read the assignment slowly and write down the real goal in one sentence: read an itinerary file, transform it into customer-friendly text, and write the result to a new file. This step is reusable for any project because it trains you to separate the core outcome from extra details."><label for="m1-w1-t1-s1">Understand the assignment goal</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w1-t1-s2" class="task-checkbox" data-description="List the inputs, outputs, and rules before coding. For this project that means command line arguments, input text, airport lookup CSV, output file, and all transformation rules. This habit makes later projects much easier to structure."><label for="m1-w1-t1-s2">List inputs, outputs, and rules</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w1-t1-s3" class="task-checkbox" data-description="Separate must-have features from optional features. Here you should identify required behavior first, then mark city lookup, dynamic CSV column order, and bonus formatting as later improvements. This keeps the first version realistic and review-ready."><label for="m1-w1-t1-s3">Separate required and extra features</label></div>
+            </div>
+          </div>
+          <div class="todo">
+            <input type="checkbox" id="m1-w1-t2" class="group-checkbox">
+            <label for="m1-w1-t2">P2EV 2 <span class="group-percent" id="percent-m1-w1-t2">0%</span></label>
+            <div class="tasks">
+              <div class="todo"><input type="checkbox" id="m1-w1-t2-s1" class="task-checkbox" data-description="Break the program into parts before writing code. For itinerary-prettifier, a good split is: argument handling, file reading, airport lookup parsing, text transformation, date formatting, whitespace cleanup, and file writing. This is a reusable design skill for every assignment."><label for="m1-w1-t2-s1">Break the program into parts</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w1-t2-s2" class="task-checkbox" data-description="Decide what each part should do and what data it needs. For example, the airport lookup should return airport or city information from codes, and the formatter should transform one string into another. This helps you write small, explainable methods later."><label for="m1-w1-t2-s2">Define responsibilities for each part</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w1-t2-s3" class="task-checkbox" data-description="Write the program flow in plain language or pseudocode from start to finish. Include success path and error path. If you can explain the flow without code, implementation becomes much simpler."><label for="m1-w1-t2-s3">Write the program flow first</label></div>
+            </div>
+          </div>
+          <div class="todo">
+            <input type="checkbox" id="m1-w1-t3" class="group-checkbox">
+            <label for="m1-w1-t3">P2EV 3 <span class="group-percent" id="percent-m1-w1-t3">0%</span></label>
+            <div class="tasks">
+              <div class="todo"><input type="checkbox" id="m1-w1-t3-s1" class="task-checkbox" data-description="Create the project files and a first runnable command line entry point. For this task, make sure `java Prettifier.java ...` works and the `-h` usage path is visible. Reusable lesson: get a small runnable version working early."><label for="m1-w1-t3-s1">Create a runnable project skeleton</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w1-t3-s2" class="task-checkbox" data-description="Prepare small sample files for input and airport lookup so you can test as you build. This project especially benefits from tiny example files containing valid and invalid airport codes and dates. Reusable habit: build your own quick test data early."><label for="m1-w1-t3-s2">Prepare small test data</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w1-t3-s3" class="task-checkbox" data-description="Implement a minimal end-to-end version that reads a file and writes a file even before all formatting features exist. That gives you a working base and confidence before deeper parsing work begins."><label for="m1-w1-t3-s3">Build a minimal end-to-end version</label></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group-item">
+        <div>
+          <input type="checkbox" id="m1-week2" class="group-checkbox">
+          <label for="m1-week2">2 Week <span class="group-percent" id="percent-m1-w2">0%</span></label>
+          
+        </div>
+        <div class="tasks">
+          <div class="todo">
+            <input type="checkbox" id="m1-w2-t1" class="group-checkbox">
+            <label for="m1-w2-t1">P2EV 1 <span class="group-percent" id="percent-m1-w2-t1">0%</span></label>
+            <div class="tasks">
+              <div class="todo"><input type="checkbox" id="m1-w2-t1-s1" class="task-checkbox" data-description="Implement reliable command line argument handling and the required `-h` help message. Also block output creation when errors happen. This is a reusable pattern for almost every command line school project."><label for="m1-w2-t1-s1">Implement command line handling</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w2-t1-s2" class="task-checkbox" data-description="Implement safe file checks for missing input and missing airport lookup, and show the exact required error messages. This trains you to build predictable user-facing behavior before complex feature work."><label for="m1-w2-t1-s2">Handle missing files safely</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w2-t1-s3" class="task-checkbox" data-description="Make sure the airport CSV is parsed by header names, not fixed positions only. Validate that required columns exist and are not blank. This teaches reusable defensive parsing for structured data."><label for="m1-w2-t1-s3">Parse and validate lookup data</label></div>
+            </div>
+          </div>
+          <div class="todo">
+            <input type="checkbox" id="m1-w2-t2" class="group-checkbox">
+            <label for="m1-w2-t2">P2EV 2 <span class="group-percent" id="percent-m1-w2-t2">0%</span></label>
+            <div class="tasks">
+              <div class="todo"><input type="checkbox" id="m1-w2-t2-s1" class="task-checkbox" data-description="Implement airport code replacement for both `#IATA` and `##ICAO` patterns. Leave unknown codes unchanged. This step is about turning a rule from the brief into clear, testable code."><label for="m1-w2-t2-s1">Implement code-to-name conversion</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w2-t2-s2" class="task-checkbox" data-description="Add city-name support for `*#` and `*##` cases using the municipality column. Reuse the same lookup logic instead of duplicating work. This is a good exercise in extending existing code cleanly."><label for="m1-w2-t2-s2">Extend conversion for city names</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w2-t2-s3" class="task-checkbox" data-description="Implement date and time formatting rules exactly as specified, including 12-hour, 24-hour, date-only, and Zulu time handling. Leave malformed tokens unchanged. This teaches careful rule implementation without breaking input that should stay untouched."><label for="m1-w2-t2-s3">Implement date and time formatting</label></div>
+            </div>
+          </div>
+          <div class="todo">
+            <input type="checkbox" id="m1-w2-t3" class="group-checkbox">
+            <label for="m1-w2-t3">P2EV 3 <span class="group-percent" id="percent-m1-w2-t3">0%</span></label>
+            <div class="tasks">
+              <div class="todo"><input type="checkbox" id="m1-w2-t3-s1" class="task-checkbox" data-description="Implement whitespace normalization: convert vertical whitespace characters to newlines and collapse repeated blank sections to a single blank line. This is a reusable text-cleaning task common in parser projects."><label for="m1-w2-t3-s1">Clean and normalize text output</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w2-t3-s2" class="task-checkbox" data-description="Connect all transformations into one complete pipeline: read input, transform text, and write output. At the end of this step, the program should solve the assignment in a full basic form. This is the milestone where the project becomes reviewable in principle."><label for="m1-w2-t3-s2">Connect the full processing pipeline</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w2-t3-s3" class="task-checkbox" data-description="Test the working version with both clean and messy examples, then fix the first round of bugs. Reusable lesson: once the pipeline works, stabilize before adding polish."><label for="m1-w2-t3-s3">Stabilize the first working version</label></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group-item">
+        <div>
+          <input type="checkbox" id="m1-week3" class="group-checkbox">
+          <label for="m1-week3">3 Week <span class="group-percent" id="percent-m1-w3">0%</span></label>
+          
+        </div>
+        <div class="tasks">
+          <div class="todo">
+            <input type="checkbox" id="m1-w3-t1" class="group-checkbox">
+            <label for="m1-w3-t1">P2EV 1 <span class="group-percent" id="percent-m1-w3-t1">0%</span></label>
+            <div class="tasks">
+              <div class="todo"><input type="checkbox" id="m1-w3-t1-s1" class="task-checkbox" data-description="Review your code for readability: rename unclear variables, split long methods, and remove duplicate logic. This is the point where you make the project understandable for another person, not just runnable for yourself."><label for="m1-w3-t1-s1">Refactor for readability</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w3-t1-s2" class="task-checkbox" data-description="Run through edge cases from the brief one by one: malformed dates, missing columns, blank CSV cells, unknown airport codes, and incorrect argument counts. Make sure the behavior matches requirements exactly. This is how you turn a working solution into a reliable one."><label for="m1-w3-t1-s2">Verify edge cases against the brief</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w3-t1-s3" class="task-checkbox" data-description="Make sure your output files, example files, and project structure are clean and easy to demo. A reviewer should be able to run the project without guessing what is important."><label for="m1-w3-t1-s3">Prepare a clean demo version</label></div>
+            </div>
+          </div>
+          <div class="todo">
+            <input type="checkbox" id="m1-w3-t2" class="group-checkbox">
+            <label for="m1-w3-t2">P2EV 2 <span class="group-percent" id="percent-m1-w3-t2">0%</span></label>
+            <div class="tasks">
+              <div class="todo"><input type="checkbox" id="m1-w3-t2-s1" class="task-checkbox" data-description="Write or update the README so it explains what the program does, how to run it, what files it needs, and any optional features. This is a reusable school habit because documentation is part of the deliverable, not an extra."><label for="m1-w3-t2-s1">Write setup and usage documentation</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w3-t2-s2" class="task-checkbox" data-description="Prepare a short explanation of your design choices: why you split the code the way you did, how the lookup works, and how malformed values are handled. This helps you be ready for review conversations, not just code submission."><label for="m1-w3-t2-s2">Prepare to explain design choices</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w3-t2-s3" class="task-checkbox" data-description="Re-run the main scenarios from start to finish as if you were the reviewer. Fix anything confusing, fragile, or incomplete. This final pass is reusable for every school project before submission."><label for="m1-w3-t2-s3">Do a full review rehearsal</label></div>
+            </div>
+          </div>
+          <div class="todo">
+            <input type="checkbox" id="m1-w3-t3" class="group-checkbox">
+            <label for="m1-w3-t3">P2EV 3 <span class="group-percent" id="percent-m1-w3-t3">0%</span></label>
+            <div class="tasks">
+              <div class="todo"><input type="checkbox" id="m1-w3-t3-s1" class="task-checkbox" data-description="Optional polish only after all required features are stable. For this assignment that could include cleaner console output, color highlighting, or a nicer internal structure. Reusable rule: polish comes after correctness."><label for="m1-w3-t3-s1">Add polish only after core is done</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w3-t3-s2" class="task-checkbox" data-description="Check that the codebase is presentable: no broken experiments, no confusing leftovers, no missing files, and no unfinished comments pretending to be features. This is the final professionalism pass before review."><label for="m1-w3-t3-s2">Clean the codebase for submission</label></div>
+              <div class="todo"><input type="checkbox" id="m1-w3-t3-s3" class="task-checkbox" data-description="Finish with confidence: verify that by the end of Week 3 you can run the tool live, explain the logic, show the README, and discuss challenges. That means the coding phase is ready to hand over to the review phase."><label for="m1-w3-t3-s3">Mark coding ready for review</label></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="top-section">
+  <h2>
+    <input type="checkbox" id="review-main-task" class="group-checkbox">
+    <label for="review-main-task"><span>review</span> ILUSTAJA 
+    <span class="group-percent" id="percent-review-main">0%</span></label>
+  </h2>
+
+  <div class="group root-group" id="review-group">
+    <div class="group-item">
+
+      <div class="group">
+        <div class="group-item">
+          <div>
+            <input type="checkbox" id="review-week1" class="group-checkbox">
+            <label for="review-week1">4 Week <span class="group-percent" id="percent-review-w1">0%</span></label>
+          </div>
+
+          <div class="tasks">
+            <div class="todo">
+              <input type="checkbox" id="review-w1-t1" class="group-checkbox">
+              <label for="review-w1-t1">P2EV 1 <span class="group-percent" id="percent-review-w1-t1">0%</span></label>
+              <div class="tasks">
+                <div class="todo"><input type="checkbox" id="review-w1-t1-s1" class="task-checkbox"><label for="review-w1-t1-s1">have a break</label></div>
+                <div class="todo"><input type="checkbox" id="review-w1-t1-s2" class="task-checkbox"><label for="review-w1-t1-s2">have another break</label></div>
+                <div class="todo"><input type="checkbox" id="review-w1-t1-s3" class="task-checkbox"><label for="review-w1-t1-s3">connect with the reviewer</label></div>
+              </div>
+            </div>
+            <div class="todo">
+              <input type="checkbox" id="review-w1-t2" class="group-checkbox">
+              <label for="review-w1-t2">P2EV 2 <span class="group-percent" id="percent-review-w1-t2">0%</span></label>
+              <div class="tasks">
+                <div class="todo"><input type="checkbox" id="review-w1-t2-s1" class="task-checkbox"><label for="review-w1-t2-s1">Sub-task 1</label></div>
+                <div class="todo"><input type="checkbox" id="review-w1-t2-s2" class="task-checkbox"><label for="review-w1-t2-s2">Sub-task 2</label></div>
+                <div class="todo"><input type="checkbox" id="review-w1-t2-s3" class="task-checkbox"><label for="review-w1-t2-s3">Sub-task 3</label></div>
+              </div>
+            </div>
+            <div class="todo">
+              <input type="checkbox" id="review-w1-t3" class="group-checkbox">
+              <label for="review-w1-t3">P2EV 3 <span class="group-percent" id="percent-review-w1-t3">0%</span></label>
+              <div class="tasks">
+                <div class="todo"><input type="checkbox" id="review-w1-t3-s1" class="task-checkbox"><label for="review-w1-t3-s1">Sub-task 1</label></div>
+                <div class="todo"><input type="checkbox" id="review-w1-t3-s2" class="task-checkbox"><label for="review-w1-t3-s2">Sub-task 2</label></div>
+                <div class="todo"><input type="checkbox" id="review-w1-t3-s3" class="task-checkbox"><label for="review-w1-t3-s3">Sub-task 3</label></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="group-item">
+          <div>
+            <input type="checkbox" id="review-week2" class="group-checkbox">
+            <label for="review-week2">5 Week <span class="group-percent" id="percent-review-w2">0%</span></label>
+          </div>
+          <div class="tasks">
+            <div class="todo">
+              <input type="checkbox" id="review-w2-t1" class="group-checkbox">
+              <label for="review-w2-t1">P2EV 1 <span class="group-percent" id="percent-review-w2-t1">0%</span></label>
+              <div class="tasks">
+                <div class="todo"><input type="checkbox" id="review-w2-t1-s1" class="task-checkbox"><label for="review-w2-t1-s1">Sub-task 1</label></div>
+                <div class="todo"><input type="checkbox" id="review-w2-t1-s2" class="task-checkbox"><label for="review-w2-t1-s2">Sub-task 2</label></div>
+                <div class="todo"><input type="checkbox" id="review-w2-t1-s3" class="task-checkbox"><label for="review-w2-t1-s3">Sub-task 3</label></div>
+              </div>
+            </div>
+            <div class="todo">
+              <input type="checkbox" id="review-w2-t2" class="group-checkbox">
+              <label for="review-w2-t2">P2EV 2 <span class="group-percent" id="percent-review-w2-t2">0%</span></label>
+              <div class="tasks">
+                <div class="todo"><input type="checkbox" id="review-w2-t2-s1" class="task-checkbox"><label for="review-w2-t2-s1">Sub-task 1</label></div>
+                <div class="todo"><input type="checkbox" id="review-w2-t2-s2" class="task-checkbox"><label for="review-w2-t2-s2">Sub-task 2</label></div>
+                <div class="todo"><input type="checkbox" id="review-w2-t2-s3" class="task-checkbox"><label for="review-w2-t2-s3">Sub-task 3</label></div>
+              </div>
+            </div>
+            <div class="todo">
+              <input type="checkbox" id="review-w2-t3" class="group-checkbox">
+              <label for="review-w2-t3">P2EV 3 <span class="group-percent" id="percent-review-w2-t3">0%</span></label>
+              <div class="tasks">
+                <div class="todo"><input type="checkbox" id="review-w2-t3-s1" class="task-checkbox"><label for="review-w2-t3-s1">Sub-task 1</label></div>
+                <div class="todo"><input type="checkbox" id="review-w2-t3-s2" class="task-checkbox"><label for="review-w2-t3-s2">Sub-task 2</label></div>
+                <div class="todo"><input type="checkbox" id="review-w2-t3-s3" class="task-checkbox"><label for="review-w2-t3-s3">Sub-task 3</label></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="group-item">
+          <div>
+            <input type="checkbox" id="review-week3" class="group-checkbox">
+            <label for="review-week3">6 Week <span class="group-percent" id="percent-review-w3">0%</span></label>
+          </div>
+          <div class="tasks">
+            <div class="todo">
+              <input type="checkbox" id="review-w3-t1" class="group-checkbox">
+              <label for="review-w3-t1">P2EV 1 <span class="group-percent" id="percent-review-w3-t1">0%</span></label>
+              <div class="tasks">
+                <div class="todo"><input type="checkbox" id="review-w3-t1-s1" class="task-checkbox"><label for="review-w3-t1-s1">Sub-task 1</label></div>
+                <div class="todo"><input type="checkbox" id="review-w3-t1-s2" class="task-checkbox"><label for="review-w3-t1-s2">Sub-task 2</label></div>
+                <div class="todo"><input type="checkbox" id="review-w3-t1-s3" class="task-checkbox"><label for="review-w3-t1-s3">Sub-task 3</label></div>
+              </div>
+            </div>
+            <div class="todo">
+              <input type="checkbox" id="review-w3-t2" class="group-checkbox">
+              <label for="review-w3-t2">P2EV 2 <span class="group-percent" id="percent-review-w3-t2">0%</span></label>
+              <div class="tasks">
+                <div class="todo"><input type="checkbox" id="review-w3-t2-s1" class="task-checkbox"><label for="review-w3-t2-s1">Sub-task 1</label></div>
+                <div class="todo"><input type="checkbox" id="review-w3-t2-s2" class="task-checkbox"><label for="review-w3-t2-s2">Sub-task 2</label></div>
+                <div class="todo"><input type="checkbox" id="review-w3-t2-s3" class="task-checkbox"><label for="review-w3-t2-s3">Sub-task 3</label></div>
+              </div>
+            </div>
+            <div class="todo">
+              <input type="checkbox" id="review-w3-t3" class="group-checkbox">
+              <label for="review-w3-t3">P2EV 3 <span class="group-percent" id="percent-review-w3-t3">0%</span></label>
+              <div class="tasks">
+                <div class="todo"><input type="checkbox" id="review-w3-t3-s1" class="task-checkbox"><label for="review-w3-t3-s1">Sub-task 1</label></div>
+                <div class="todo"><input type="checkbox" id="review-w3-t3-s2" class="task-checkbox"><label for="review-w3-t3-s2">Sub-task 2</label></div>
+                <div class="todo"><input type="checkbox" id="review-w3-t3-s3" class="task-checkbox"><label for="review-w3-t3-s3">Sub-task 3</label></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- README note -->
+<section class="readme-note" aria-label="README">
+  <h3>THIS TOOL</h3>
+  <p>makes Siina P22suke feel good dopamine completing school tasks.</p>
+  <p>Start of Week 1: 16 M2RZ 2026.</p>
+  <p>It's a TOGGLE SYSTEM!</p>
+  <p class="readme-sidefx">IMPORTANT! This tool requires the user to remember their accomplishments, which also may cause sudden pride, repeated smiling, and healthy addiction to tracking progress.</p>
+</section>
+
+<script>
+// Inline script to manage hierarchical tasks and percentages
+(function(){
+  function getDirectChild(element, selector) {
+    if (!element) return null;
+    return Array.from(element.children).find(child => child.matches && child.matches(selector)) || null;
+  }
+
+  function getHeaderElement(container) {
+    if (!container) return null;
+    if (container.classList.contains('todo')) return container;
+    const firstChild = container.firstElementChild;
+    return firstChild && firstChild.tagName === 'DIV' ? firstChild : container;
+  }
+
+  function ensureToggleButton(container) {
+    const header = getHeaderElement(container);
+    if (!header) return;
+
+    header.classList.add('tree-toggle-header');
+
+    const existingButton = header.querySelector('.tree-toggle-btn');
+    if (existingButton) return;
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'tree-toggle-btn';
+    button.setAttribute('aria-label', 'Toggle subtasks');
+    button.textContent = '▸';
+
+    const label = header.querySelector('label');
+    if (label) {
+      header.insertBefore(button, label);
+    } else {
+      header.appendChild(button);
+    }
+  }
+
+  function getDirectChildTasks(element) {
+    if (!element) return null;
+    return Array.from(element.children).find(child => child.classList && child.classList.contains('tasks')) || null;
+  }
+
+  function getTaskDescriptionElement(element) {
+    if (!element) return null;
+    return Array.from(element.children).find(child => child.classList && child.classList.contains('task-description')) || null;
+  }
+
+  function getTaskPath(todo) {
+    const parts = [];
+    let current = todo;
+
+    while (current) {
+      const label = getDirectChild(current, 'label');
+      if (label) {
+        const percent = label.querySelector('.group-percent');
+        if (percent) {
+          parts.unshift(label.textContent.replace(percent.textContent, '').trim());
+        } else {
+          parts.unshift(label.textContent.trim());
+        }
+      }
+      current = current.parentElement ? current.parentElement.closest('.todo, .group-item') : null;
+    }
+
+    return parts.join(' / ');
+  }
+
+  function getTaskDescriptionText(todo) {
+    const checkbox = getDirectChild(todo, 'input.task-checkbox');
+    const label = getDirectChild(todo, 'label');
+    const customDescription = todo.dataset.description || (checkbox && checkbox.dataset.description) || (label && label.dataset.description);
+    if (customDescription) return customDescription;
+
+    return getTaskPath(todo) + ' description.';
+  }
+
+  function setTaskDescriptionExpanded(todo, expanded) {
+    const description = getTaskDescriptionElement(todo);
+    const button = getDirectChild(todo, '.task-detail-btn');
+    if (!description || !button) return;
+
+    todo.classList.toggle('is-expanded', expanded);
+    todo.classList.toggle('is-collapsed', !expanded);
+    description.style.display = expanded ? 'block' : 'none';
+    button.textContent = expanded ? '▾' : '▸';
+    button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  }
+
+  function ensureTaskDescriptionToggle(todo) {
+    const checkbox = getDirectChild(todo, 'input.task-checkbox');
+    const label = getDirectChild(todo, 'label');
+    if (!checkbox || !label || getDirectChildTasks(todo)) return;
+
+    todo.classList.add('task-detail-toggle');
+
+    let button = getDirectChild(todo, '.task-detail-btn');
+    if (!button) {
+      button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'tree-toggle-btn task-detail-btn';
+      button.setAttribute('aria-label', 'Toggle task description');
+      button.textContent = '▸';
+      todo.insertBefore(button, label);
+    }
+
+    let description = getTaskDescriptionElement(todo);
+    if (!description) {
+      description = document.createElement('div');
+      description.className = 'task-description';
+      description.textContent = getTaskDescriptionText(todo);
+      todo.appendChild(description);
+    }
+
+    setTaskDescriptionExpanded(todo, false);
+  }
+
+  function initializeTaskDescriptionToggles() {
+    const leafTasks = Array.from(document.querySelectorAll('.todo')).filter(todo => {
+      return !!getDirectChild(todo, 'input.task-checkbox') && !getDirectChildTasks(todo);
+    });
+
+    leafTasks.forEach(ensureTaskDescriptionToggle);
+  }
+
+  function getTopSectionGroup(checkbox) {
+    const section = checkbox.closest('.top-section');
+    return section ? section.querySelector('.root-group') : document.getElementById('main-group');
+  }
+
+  function hasDirectGroupCheckbox(element) {
+    if (!element) return false;
+    return Array.from(element.children).some(child => child.matches && child.matches('input.group-checkbox'));
+  }
+
+  function setExpanded(container, expanded) {
+    const tasks = getDirectChildTasks(container);
+    if (!tasks) return;
+    container.classList.toggle('is-expanded', expanded);
+    container.classList.toggle('is-collapsed', !expanded);
+    tasks.style.display = expanded ? 'block' : 'none';
+
+    const header = getHeaderElement(container);
+    const button = header ? header.querySelector('.tree-toggle-btn') : null;
+    if (button) {
+      button.textContent = expanded ? '▾' : '▸';
+      button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    }
+  }
+
+  function getToggleContainerFromCheckbox(checkbox) {
+    const todo = checkbox.closest('.todo');
+    if (todo && getDirectChildTasks(todo)) return todo;
+
+    const groupItem = checkbox.closest('.group-item');
+    if (groupItem && getDirectChildTasks(groupItem)) return groupItem;
+
+    return null;
+  }
+
+  function initializeTreeToggles() {
+    const weekItems = Array.from(document.querySelectorAll('.root-group .group > .group-item'));
+    weekItems.forEach(item => {
+      if (getDirectChildTasks(item)) {
+        item.classList.add('tree-toggle');
+        ensureToggleButton(item);
+        setExpanded(item, false);
+      }
+    });
+
+    const dayItems = Array.from(document.querySelectorAll('.todo')).filter(todo => {
+      return hasDirectGroupCheckbox(todo) && !!getDirectChildTasks(todo);
+    });
+
+    dayItems.forEach(todo => {
+      todo.classList.add('tree-toggle');
+      ensureToggleButton(todo);
+      setExpanded(todo, false);
+    });
+  }
+
+  function getLeafCheckboxes(container) {
+    return Array.from(container.querySelectorAll('input.task-checkbox'));
+  }
+
+  function computePercent(container) {
+    const leaves = getLeafCheckboxes(container);
+    if (!leaves.length) return 0;
+    const checked = leaves.filter(cb => cb.checked).length;
+    return Math.round((checked / leaves.length) * 100);
+  }
+
+  function updatePercentSpan(span, percent) {
+    if (span) span.textContent = percent + '%';
+  }
+
+  function updateProgressLabel(checkbox, percent) {
+    if (!checkbox) return;
+    const label = document.querySelector('label[for="' + checkbox.id + '"]');
+    if (!label) return;
+
+    label.classList.add('progress-fill');
+    label.style.setProperty('--task-progress', percent + '%');
+    label.classList.toggle('is-complete', percent >= 100);
+    label.classList.toggle('is-in-progress', percent > 0 && percent < 100);
+    label.classList.toggle('is-empty', percent <= 0);
+  }
+
+  function getCurrentIlustajaWeek() {
+    const now = new Date();
+    const weekStart = new Date(2026, 2, 16, 0, 0, 0, 0);
+    const weekMs = 7 * 24 * 60 * 60 * 1000;
+    const elapsedWeeks = Math.floor((now - weekStart) / weekMs);
+    return Math.max(1, elapsedWeeks + 1);
+  }
+
+  function getTrackedWeekLabels() {
+    const weekLabels = Array.from(document.querySelectorAll('label[for]')).filter(label => {
+      const forId = label.getAttribute('for') || '';
+      return /^m1-week\d+$/.test(forId) || /^review-week\d+$/.test(forId);
+    });
+
+    return weekLabels
+      .map(label => {
+        const text = (label.textContent || '').trim();
+        const match = text.match(/^(\d+)/);
+        const number = match ? Number(match[1]) : NaN;
+        return Number.isFinite(number) ? { number, label } : null;
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.number - b.number);
+  }
+
+  function ensureFloatingWeekMarker() {
+    let marker = document.getElementById('where-marker-floating');
+    if (marker) return marker;
+
+    marker = document.createElement('div');
+    marker.id = 'where-marker-floating';
+    marker.className = 'where-marker-floating';
+    marker.innerHTML = '<span class="where-symbol"></span><span class="where-tag">T2NA</span>';
+    document.body.appendChild(marker);
+    return marker;
+  }
+
+  function getWeekTargetLabel(weekNumber) {
+    const trackedWeeks = getTrackedWeekLabels();
+    if (!trackedWeeks.length) return null;
+
+    const exact = trackedWeeks.find(item => item.number === weekNumber);
+    if (exact) return exact.label;
+
+    if (weekNumber < trackedWeeks[0].number) return trackedWeeks[0].label;
+    return trackedWeeks[trackedWeeks.length - 1].label;
+  }
+
+  function markCurrentWeekPosition() {
+    const currentWeek = getCurrentIlustajaWeek();
+    const marker = ensureFloatingWeekMarker();
+    const targetLabel = getWeekTargetLabel(currentWeek);
+
+    if (!targetLabel) {
+      marker.style.display = 'none';
+      return;
+    }
+
+    const rect = targetLabel.getBoundingClientRect();
+    const markerHeight = marker.offsetHeight || 24;
+
+    marker.style.display = 'inline-flex';
+    marker.style.left = (rect.left - 44) + 'px';
+    marker.style.top = (rect.top + rect.height - markerHeight + 2) + 'px';
+  }
+
+  // Update all group percent displays
+  function updateAll() {
+    // Update per-week and per-module and main
+    const weekPercents = document.querySelectorAll('.group-item .group .group-item'); // not needed, we'll traverse groups
+
+    // For each group checkbox, compute percent for its containing group element
+    const groupCheckboxes = Array.from(document.querySelectorAll('input.group-checkbox'));
+    groupCheckboxes.forEach(gcb => {
+      const groupElem = gcb.closest('.todo') || gcb.closest('.group-item') || gcb.closest('.group');
+      // Determine container to compute leaves: the group element's subtree after the heading
+      let container = groupElem;
+      if (!container) container = getTopSectionGroup(gcb);
+      const percent = computePercent(container);
+      // find the percent span next to this checkbox
+      const span = container.querySelector('#percent-' + gcb.id) || gcb.parentElement.querySelector('.group-percent');
+      updatePercentSpan(span, percent);
+      updateProgressLabel(gcb, percent);
+
+      // update group checkbox checked/indeterminate state based on leaves
+      const leaves = getLeafCheckboxes(container);
+      const checkedLeaves = leaves.filter(cb => cb.checked).length;
+      if (!leaves.length) {
+        gcb.checked = false;
+        gcb.indeterminate = false;
+      } else if (checkedLeaves === leaves.length) {
+        gcb.checked = true;
+        gcb.indeterminate = false;
+      } else if (checkedLeaves === 0) {
+        gcb.checked = false;
+        gcb.indeterminate = false;
+      } else {
+        gcb.checked = false;
+        gcb.indeterminate = true;
+      }
+    });
+
+    // Finally update top-level section percent spans
+    const topSections = Array.from(document.querySelectorAll('.top-section'));
+    topSections.forEach(section => {
+      const topCheckbox = section.querySelector('h2 input.group-checkbox');
+      const topGroup = section.querySelector('.root-group');
+      const topSpan = section.querySelector('h2 .group-percent');
+      if (!topCheckbox || !topGroup || !topSpan) return;
+
+      const percent = computePercent(topGroup);
+      updatePercentSpan(topSpan, percent);
+      updateProgressLabel(topCheckbox, percent);
+    });
+
+    // Also update module-level displays explicitly (if present in markup)
+    const module1 = document.querySelector('#module1');
+    const module2 = document.querySelector('#module2');
+    if (module1) {
+      updatePercentSpan(document.getElementById('percent-module1'), computePercent(module1.closest('.group-item')));
+    }
+    if (module2) {
+      updatePercentSpan(document.getElementById('percent-module2'), computePercent(module2.closest('.group-item')));
+    }
+
+  }
+
+  // When a group checkbox is toggled, set all descendant leaves to the same state
+  document.addEventListener('change', function(e){
+    const target = e.target;
+    if (target.classList && target.classList.contains('group-checkbox')) {
+      // find group container for this checkbox
+      const container = target.closest('.todo') || target.closest('.group-item') || target.closest('.group') || getTopSectionGroup(target);
+      // toggle all descendant task-checkboxes
+      const leaves = getLeafCheckboxes(container);
+      leaves.forEach(cb => cb.checked = target.checked);
+      // Also propagate to nested group-checkboxes to keep UI consistent
+      const nestedGroupChecks = Array.from(container.querySelectorAll('input.group-checkbox'));
+      nestedGroupChecks.forEach(gc => {
+        if (gc !== target) {
+          gc.checked = target.checked;
+          gc.indeterminate = false;
+        }
+      });
+    }
+
+    // For any change, recompute all percents and parent states
+    updateAll();
+
+    // Also notify parent window (index.html) by dispatching a custom event if available
+    try {
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage({type: 'progress-updated'}, '*');
+      }
+    } catch (err) {
+      // ignore cross-origin
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    const button = e.target.closest('.tree-toggle-btn');
+    if (!button) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (button.classList.contains('task-detail-btn')) {
+      const todo = button.closest('.task-detail-toggle');
+      if (!todo) return;
+
+      setTaskDescriptionExpanded(todo, todo.classList.contains('is-collapsed'));
+      return;
+    }
+
+    const container = button.closest('.tree-toggle');
+    if (!container) return;
+
+    setExpanded(container, container.classList.contains('is-collapsed'));
+  });
+
+  // Initial update on load
+  document.addEventListener('DOMContentLoaded', function(){
+    initializeTreeToggles();
+    initializeTaskDescriptionToggles();
+    updateAll();
+    markCurrentWeekPosition();
+    setInterval(markCurrentWeekPosition, 60000);
+    window.addEventListener('resize', markCurrentWeekPosition);
+    window.addEventListener('scroll', markCurrentWeekPosition, { passive: true });
+  });
+
+})();
+</script>
+
+
+    <script src="progress.js"></script>
+
+<div class="git-reminder">
+<strong>After you finish,</strong>
+<pre>
+git add .
+git commit -m "i DiD iT"
+git push
+</pre>
+</div>
+
+<footer id="kalender">today's</footer>
+<script src="../js/kalender.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+a {
+     color: yellow;
+     cursor:crosshair;
+ }
+ 
+ 
+ a:visited {
+     color: yellow;
+ }
+ 
+ 
+ header {
+     width: 100%;
+     max-width: 1980px;
+     position: fixed;
+     display: flex;
+     justify-content: space-between;
+     padding-bottom: 0.4em;
+     top: 0;
+     left: 0;
+     border: 3px;
+     z-index: 4;
+ }
+ 
+ h1 {
+     font-size: 66px;
+     padding: 0;
+     margin: 0;
+     font-weight: normal;
+ }
+
+ aside {
+    font-size: 27px;
+ }
+  
+ nav {
+     position: fixed;
+     bottom: 0;
+     right: 0;
+ }
+ 
+ ul {
+     margin: 0;
+     list-style: none;
+ }
+ 
+ .sisu {
+     text-align: center;
+ }
+ /*laptop*/
+ 
+ @media only screen and (min-width: 768px) {
+     body {
+         font-size: 32px;
+     }
+ }
+ 
+ /*desktop*/
+ 
+ @media only screen and (min-width: 1440px) {
+     body {
+         font-size: 64px;
+     }
+         
+     header {
+         padding-bottom: 0.1em;
+     }
+ }
+ 
+ 
+ 
+ 
+ .overlay {
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     color: white;
+     background:url('murus.jpeg')black;
+     transition: opacity 500ms;
+     visibility: hidden;
+     opacity: 0;
+     z-index: 8;
+   }
+ .overlay:target {
+   visibility: visible;
+   opacity: 1;
+ }
+
+#alert6 {
+        text-align: right;
+}
+ 
+
+ .kalender {
+    color: blue;
+ }
+
+#kalender {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    color: blue;
+    text-align: left;
+}
+
+#kalender .kalender-code {
+    color: blue;
+}
+
+#kalender .kal-number {
+    color: blue;
+}
+
+#kalender .kal-separator {
+    color: white;
+}
+
+#kalender .kal-week-link {
+    color: yellow;
+    text-decoration: underline;
+    cursor: crosshair;
+}
+
+#kalender .kal-week-link:visited {
+    color: yellow;
+}
+
+#kalender .kal-week-link:hover {
+    text-decoration: underline;
+}
